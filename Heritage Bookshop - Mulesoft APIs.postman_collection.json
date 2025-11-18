@@ -1,0 +1,529 @@
+{
+	"info": {
+		"_postman_id": "e339c786-f3fb-4f22-99e5-168f399a73eb",
+		"name": "Heritage Bookshop - Mulesoft APIs Copy",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "11804881"
+	},
+	"item": [
+		{
+			"name": "hb-internal-exp-app",
+			"item": [
+				{
+					"name": "sales/{transactionId}",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://hb-internal-exp-app-yacb0e.5sc6y6-3.usa-e2.cloudhub.io/global/hb/internal/exp/v1/sales/:transactionId",
+							"protocol": "https",
+							"host": [
+								"hb-internal-exp-app-yacb0e",
+								"5sc6y6-3",
+								"usa-e2",
+								"cloudhub",
+								"io"
+							],
+							"path": [
+								"global",
+								"hb",
+								"internal",
+								"exp",
+								"v1",
+								"sales",
+								":transactionId"
+							],
+							"variable": [
+								{
+									"key": "transactionId",
+									"value": "B100010"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "blue-exp-api",
+			"item": [
+				{
+					"name": "sales",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"salesId\": \"B100010\",\r\n  \"fullName\": \"Juliet Borja\",\r\n  \"deliveryLoc\": \"Las Piñas City\",\r\n  \"age\": \"36\",\r\n  \"gender\": \"F\",\r\n  \"contact\": \"+639188881999\",\r\n  \"products\": [\r\n    {\r\n      \"id\": \"B100010-001\",\r\n      \"name\": \"Stephen King: IT\",\r\n      \"price\": 999,\r\n      \"qty\": 1\r\n    }\r\n  ],\r\n  \"amountDue\": 999,\r\n  \"paymentType\": \"GCash\",\r\n  \"creationDate\": \"2025-10-25T10:00:00Z\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://blue-exp-app-yacb0e.5sc6y6-4.usa-e2.cloudhub.io/global/blue/exp/v1/sales",
+							"protocol": "https",
+							"host": [
+								"blue-exp-app-yacb0e",
+								"5sc6y6-4",
+								"usa-e2",
+								"cloudhub",
+								"io"
+							],
+							"path": [
+								"global",
+								"blue",
+								"exp",
+								"v1",
+								"sales"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "sales - Postman Multi Run",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"salesId\": \"{{salesId}}\",\r\n    \"fullName\": \"{{fullName}}\",\r\n    \"deliveryLoc\": \"{{deliveryLoc}}\",\r\n    \"age\": \"{{age}}\",\r\n    \"gender\": \"{{gender}}\",\r\n    \"contact\": \"{{contact}}\",\r\n    \"products\": {{products}},\r\n    \"amountDue\": {{amountDue}},\r\n    \"paymentType\": \"{{paymentType}}\",\r\n    \"creationDate\": \"{{creationDate}}\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://blue-exp-app-yacb0e.5sc6y6-4.usa-e2.cloudhub.io/global/blue/exp/v1/sales",
+							"protocol": "https",
+							"host": [
+								"blue-exp-app-yacb0e",
+								"5sc6y6-4",
+								"usa-e2",
+								"cloudhub",
+								"io"
+							],
+							"path": [
+								"global",
+								"blue",
+								"exp",
+								"v1",
+								"sales"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "orange-exp-api",
+			"item": [
+				{
+					"name": "sales",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"transactionId\": \"Orange-011\",\r\n  \"customer_information\": {\r\n    \"name\": \"Francis Uy\",\r\n    \"address\": \"34 Greenpark Village, Pasig City\",\r\n    \"age\": 26,\r\n    \"gender\": \"M\",\r\n    \"phone\": \"+639181234666\"\r\n  },\r\n  \"line_items\": [\r\n    {\r\n      \"lineId\": \"Orange-011-001\",\r\n      \"product\": \"The Little Prince\",\r\n      \"unitPrice\": 399,\r\n      \"quantity\": 1\r\n    }\r\n  ],\r\n  \"total\": 399,\r\n  \"mop\": \"Credit Card\",\r\n  \"timestamp\": \"2025-11-02T12:45:00Z\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://orange-exp-app-yacb0e.5sc6y6-4.usa-e2.cloudhub.io//global/orange/exp/v1/sales",
+							"protocol": "https",
+							"host": [
+								"orange-exp-app-yacb0e",
+								"5sc6y6-4",
+								"usa-e2",
+								"cloudhub",
+								"io"
+							],
+							"path": [
+								"",
+								"global",
+								"orange",
+								"exp",
+								"v1",
+								"sales"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "sales - Postman Multi Run",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"transactionId\": \"{{transactionId}}\",\r\n    \"customer_information\": {\r\n        \"name\": \"{{customerName}}\",\r\n        \"address\": \"{{address}}\",\r\n        \"age\": {{age}},\r\n        \"gender\": \"{{gender}}\",\r\n        \"phone\": \"{{phone}}\"\r\n    },\r\n    \"line_items\": {{line_items}},\r\n    \"total\": {{total}},\r\n    \"mop\": \"{{mop}}\",\r\n    \"timestamp\": \"{{timestamp}}\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://orange-exp-app-yacb0e.5sc6y6-4.usa-e2.cloudhub.io//global/orange/exp/v1/sales",
+							"protocol": "https",
+							"host": [
+								"orange-exp-app-yacb0e",
+								"5sc6y6-4",
+								"usa-e2",
+								"cloudhub",
+								"io"
+							],
+							"path": [
+								"",
+								"global",
+								"orange",
+								"exp",
+								"v1",
+								"sales"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "sales-prc-app",
+			"item": [
+				{
+					"name": "sales",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"transactionId\": \"Orange-004\",\r\n    \"source\": \"Blue App\",\r\n    \"customerName\": \"Bobby Ong\",\r\n    \"deliveryAddress\": \"#5 Road, Bambang, Pasig City\",\r\n    \"customerAge\": 21,\r\n    \"customerGender\": null,\r\n    \"customerContact\": \"+639177777787\",\r\n    \"items\": [\r\n        {\r\n            \"itemId\": \"Orange-001-001\",\r\n            \"name\": \"Harry Potter and the Chamber of Secrets\",\r\n            \"price\": 998,\r\n            \"quantity\": 1\r\n        }\r\n    ],\r\n    \"totalAmount\": 998,\r\n    \"paymentType\": \"Credit Card\",\r\n    \"transactionDate\": \"2025-09-29T10:15:00Z\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://sales-prc-app-yacb0e.5sc6y6-3.usa-e2.cloudhub.io/global/sales/prc/v1/sales",
+							"protocol": "https",
+							"host": [
+								"sales-prc-app-yacb0e",
+								"5sc6y6-3",
+								"usa-e2",
+								"cloudhub",
+								"io"
+							],
+							"path": [
+								"global",
+								"sales",
+								"prc",
+								"v1",
+								"sales"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "sales/{transactionId}",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://sales-prc-app-yacb0e.5sc6y6-3.usa-e2.cloudhub.io/global/sales/prc/v1/sales/:transactionId",
+							"protocol": "https",
+							"host": [
+								"sales-prc-app-yacb0e",
+								"5sc6y6-3",
+								"usa-e2",
+								"cloudhub",
+								"io"
+							],
+							"path": [
+								"global",
+								"sales",
+								"prc",
+								"v1",
+								"sales",
+								":transactionId"
+							],
+							"variable": [
+								{
+									"key": "transactionId",
+									"value": "B10001"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "sales-db-sys-app",
+			"item": [
+				{
+					"name": "sales",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "client_id",
+								"value": "{{sales-db-sys-client-id}}",
+								"type": "text"
+							},
+							{
+								"key": "client_secret",
+								"value": "{{sales-db-sys-client-secret}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"transactionId\": \"Orange-001\",\r\n    \"source\": \"Orange App\",\r\n    \"customerName\": \"Bobby Ong\",\r\n    \"deliveryAddress\": \"#5 Road, Bambang, Pasig City\",\r\n    \"customerAge\": 21,\r\n    \"customerGender\": \"M\",\r\n    \"customerContact\": \"+639177777787\",\r\n    \"totalAmount\": 998,\r\n    \"paymentType\": \"Credit Card\",\r\n    \"transactionDate\": \"2025-09-29T10:15:00Z\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://sales-db-sys-app-yacb0e.5sc6y6-2.usa-e2.cloudhub.io/api/sales",
+							"protocol": "https",
+							"host": [
+								"sales-db-sys-app-yacb0e",
+								"5sc6y6-2",
+								"usa-e2",
+								"cloudhub",
+								"io"
+							],
+							"path": [
+								"api",
+								"sales"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "sales/items",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "client_id",
+								"value": "{{sales-db-sys-client-id}}",
+								"type": "text"
+							},
+							{
+								"key": "client_secret",
+								"value": "{{sales-db-sys-client-secret}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"transactionId\": \"B10003\",\r\n    \"items\": [\r\n        {\r\n            \"itemId\": \"B10004-007\",\r\n            \"name\": \"The Chronicles of Narnia: Prince Caspian\",\r\n            \"price\": 1499.00,\r\n            \"quantity\": 1\r\n        },\r\n        {\r\n            \"itemId\": \"B10004-008\",\r\n            \"name\": \"Lord of the Rings: The Fellowship of the Ring\",\r\n            \"price\": 1899,\r\n            \"quantity\": 1\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://sales-db-sys-app-yacb0e.5sc6y6-1.usa-e2.cloudhub.io/api/sales/items",
+							"protocol": "https",
+							"host": [
+								"sales-db-sys-app-yacb0e",
+								"5sc6y6-1",
+								"usa-e2",
+								"cloudhub",
+								"io"
+							],
+							"path": [
+								"api",
+								"sales",
+								"items"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "sales/{transactionId}",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "client_id",
+								"value": "{{sales-db-sys-client-id}}",
+								"type": "text"
+							},
+							{
+								"key": "client_secret",
+								"value": "{{sales-db-sys-client-secret}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://sales-db-sys-app-yacb0e.5sc6y6-2.usa-e2.cloudhub.io/api/sales/:transactionId",
+							"protocol": "https",
+							"host": [
+								"sales-db-sys-app-yacb0e",
+								"5sc6y6-2",
+								"usa-e2",
+								"cloudhub",
+								"io"
+							],
+							"path": [
+								"api",
+								"sales",
+								":transactionId"
+							],
+							"variable": [
+								{
+									"key": "transactionId",
+									"value": "C10001"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "sales/{transactionId}",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "client_id",
+								"value": "{{sales-db-sys-client-id}}",
+								"type": "text"
+							},
+							{
+								"key": "client_secret",
+								"value": "{{sales-db-sys-client-secret}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://sales-db-sys-app-yacb0e.5sc6y6-1.usa-e2.cloudhub.io/api/sales/:transactionId",
+							"protocol": "https",
+							"host": [
+								"sales-db-sys-app-yacb0e",
+								"5sc6y6-1",
+								"usa-e2",
+								"cloudhub",
+								"io"
+							],
+							"path": [
+								"api",
+								"sales",
+								":transactionId"
+							],
+							"variable": [
+								{
+									"key": "transactionId",
+									"value": "Orange-004"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "sales by year or date [NOT IMPLEMENTED]",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "client_id",
+								"value": "{{sales-db-sys-client-id}}",
+								"type": "text"
+							},
+							{
+								"key": "client_secret",
+								"value": "{{sales-db-sys-client-secret}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://sales-db-sys-app-yacb0e.5sc6y6-1.usa-e2.cloudhub.io/api/sales?date=2025-11-18",
+							"protocol": "https",
+							"host": [
+								"sales-db-sys-app-yacb0e",
+								"5sc6y6-1",
+								"usa-e2",
+								"cloudhub",
+								"io"
+							],
+							"path": [
+								"api",
+								"sales"
+							],
+							"query": [
+								{
+									"key": "date",
+									"value": "2025-11-18",
+									"description": "yyyy-MM-dd format"
+								},
+								{
+									"key": "year",
+									"value": "2025",
+									"description": "yyyy format",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "sales-db-sys-client-id",
+			"value": "c6c3d17209a04f7cbfced938a83888c7",
+			"type": "string"
+		},
+		{
+			"key": "sales-db-sys-client-secret",
+			"value": "D2652cc23523475Ba6358572580993C9",
+			"type": "string"
+		}
+	]
+}
